@@ -46,20 +46,23 @@ public class MatrixPrinter
 
     public static int maxDigits(int[] arr)
     {
-	int maxNum = 0;
+	int res = 0;
 
 	for (int i = 0; i < arr.length; ++i) {
 	    int ai = (arr[i] < 0) ? -arr[i] : arr[i];
-	    maxNum = Integer.max(maxNum, ai);
+
+	    int x = 0;
+	    while (ai > 0) {
+		++x;
+		ai /= 10;
+	    }
+	    if (x == 0) x = 1;
+	    if (arr[i] < 0) ++x;
+	    
+	    if (x > res) res = x;
 	}
 
-	int x = 0;
-	while (maxNum > 0) {
-	    ++x;
-	    maxNum /= 10;
-	}
-
-	return (x == 0) ? 1 : x;
+	return res;
     }
 
     public static int maxDigits(int[][] mat)
