@@ -20,8 +20,7 @@ public class Determinants
     public static void main(String[] args)
     {
 	readMatrix();
-
-	System.out.println("System read:");
+	System.out.println();
 	printSystem(matrix, vals);
 
 	var results = DeterminantSolver.solve(matrix, vals);
@@ -43,7 +42,10 @@ public class Determinants
 	matrix = new int[n][n];
 	vals = new int[n];
 
-	System.out.println("\nPlease enter %d distinct equations ");
+	System.out.printf(
+	    "\nPlease enter %d distinct equations, each one in a row and only the coefficients:\n",
+	    n
+	);
 
 	for (int i = 0; i < n; ++i) {
 	    for (int j = 0; j <= n; ++j) { // we read n+1 numbers because we are reading the vals n*1 matrix
