@@ -35,11 +35,10 @@ public class Determinants
 
     public static void readMatrix()
     {
-	
 	System.out.println("Please enter the number of variables in the system of equations: ");
 	Scanner scanner = new Scanner(System.in);
 	int n;
-	
+
 	while (true) {
 	    n = scanner.nextInt();
 	    if (!(n > 0)) {

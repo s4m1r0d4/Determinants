@@ -59,7 +59,7 @@ public class MatrixPrinter
 	    maxNum /= 10;
 	}
 
-	return (x == 0 ? 1 : x);
+	return (x == 0) ? 1 : x;
     }
 
     public static int maxDigits(int[][] mat)
