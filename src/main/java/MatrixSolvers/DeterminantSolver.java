@@ -16,7 +16,9 @@ public class DeterminantSolver
     public static double[] solve(int[][] mat, int[] vals)
     {
 	int n = mat.length;
-
+	if (n == 1) {
+	    return new double[]{(double) vals[0]};
+	}
 	int det = determinant(mat);
 	if (det == 0) {
 	    System.out.println("[ERROR] Determinant of matrix equals to zero");

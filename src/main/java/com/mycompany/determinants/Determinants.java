@@ -35,9 +35,19 @@ public class Determinants
 
     public static void readMatrix()
     {
-	System.out.println("Please enter the number variables in the system of equations: ");
+	
+	System.out.println("Please enter the number of variables in the system of equations: ");
 	Scanner scanner = new Scanner(System.in);
-	int n = scanner.nextInt();
+	int n;
+	
+	while (true) {
+	    n = scanner.nextInt();
+	    if (!(n > 0)) {
+		System.out.println("[ERROR] Number of variables must be greater than 0");
+	    } else {
+		break;
+	    }
+	}
 
 	matrix = new int[n][n];
 	vals = new int[n];
