@@ -1,9 +1,9 @@
 # Práctica Determinantes
 ## Programación Avanzada II
 
-Este programa resuelve sistemas de ecuaciones lineares con coeficientes enteros utilizando el método de [expansión de Laplace][https://en.wikipedia.org/wiki/Laplace_expansion].
+Este programa resuelve sistemas de ecuaciones lineares con coeficientes enteros utilizando el método de [expansión de Laplace](https://en.wikipedia.org/wiki/Laplace_expansion).
 
-## Ejemplo de entrada
+## Ejemplo de uso
 
 ```
 Output: Please enter the number variables in the system of equations: 
